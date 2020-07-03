@@ -1,0 +1,995 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>Pythagorean Theorem &#8212; Cybera Curriculum Notebooks</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css" integrity="sha384-KA6wR/X5RY4zFAHpv/CnoG2UW1uogYfdnP67Uv7eULvTveboZJg0qUpmJZb5VqzN" crossorigin="anonymous">
+    <link href="../../../_static/css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../_static/sphinx-book-theme.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/jupyter-sphinx.css" />
+    <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/language_data.js"></script>
+    <script type="text/javascript" src="../../../_static/togglebutton.js"></script>
+    <script type="text/javascript" src="../../../_static/clipboard.min.js"></script>
+    <script type="text/javascript" src="../../../_static/copybutton.js"></script>
+    <script type="text/javascript" src="../../../_static/mystnb.js"></script>
+    <script type="text/javascript" src="../../../_static/sphinx-book-theme.js"></script>
+    <script type="text/javascript">var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script type="text/javascript" src="https://unpkg.com/@jupyter-widgets/html-manager@^0.18.0/dist/embed-amd.js"></script>
+    <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="docsearch:language" content="en">
+
+
+
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+<a class="navbar-brand text-wrap" href="../../../index.html">
+  
+  <img src="../../../_static/CallystoLogo.png" class="logo" alt="logo">
+  
+  
+  <h1 class="site-logo" id="site-title">Cybera Curriculum Notebooks</h1>
+  
+</a>
+</div>
+
+<form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form>
+
+<nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  
+  <ul class="nav sidenav_l1">
+  <li class="">
+    <a href="../../../intro.html">Welcome to your Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../../../notebooks.html">Content with notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../../content.html">Content in Jupyter Book</a>
+  </li>
+  <li class="">
+    <a href="../../../markdown.html">Markdown Files</a>
+  </li>
+  <li class="">
+    <a href="../../CONTRIBUTING.html">Contributing Guidelines</a>
+  </li>
+  <li class="">
+    <a href="../../Arts/empty.html">Arts Notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../Science/empty.html">Science notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../Health/empty.html">Health notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../SocialStudies/empty.html">Social Studies notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../EnglishLanguageArts/empty.html">English Language Arts notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../TechnologyStudies/empty.html">Technology Studies notebooks</a>
+  </li>
+  <li class="">
+    <a href="../../Languages/empty.html">Languages notebooks</a>
+  </li>
+</ul>
+</nav>
+
+ <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="row topbar fixed-top container-xl">
+    <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show">
+    </div>
+    <div class="col pl-2 topbar-main">
+        
+        <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+            data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+            aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+            title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+            <i class="fas fa-bars"></i>
+            <i class="fas fa-arrow-left"></i>
+            <i class="fas fa-arrow-up"></i>
+        </button>
+        
+        <div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../../_sources/curriculum-notebooks/Mathematics/PythagoreanTheorem/pythagorean-theorem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+    
+</div>
+        <!-- Source interaction buttons -->
+
+
+        <!-- Full screen (wrap in <a> to have style consistency -->
+        <a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+                data-placement="bottom" onclick="toggleFullScreen()" title="Fullscreen mode"><i
+                    class="fas fa-expand"></i></button></a>
+
+        <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/callysto/curriculum-notebooks/master?urlpath=tree/curriculum-notebooks/Mathematics/PythagoreanTheorem/pythagorean-theorem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        <a class="jupyterhub-button" href="https://hub.callysto.ca/hub/user-redirect/git-pull?repo=https://github.com/callysto/curriculum-notebooks&urlpath=tree/curriculum-notebooks/curriculum-notebooks/Mathematics/PythagoreanTheorem/pythagorean-theorem.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch JupyterHub" data-toggle="tooltip"
+                data-placement="left"><img class="jupyterhub-button-logo"
+                    src="../../../_static/images/logo_jupyterhub.svg"
+                    alt="Interact on JupyterHub">JupyterHub</button></a>
+        
+        
+        
+    </div>
+</div>
+
+    </div>
+    <div class="d-none d-md-block col-md-2 bd-toc show">
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="nav section-nav flex-column">
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#grade-8-curriculum" class="nav-link">Grade 8 curriculum</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#introduction" class="nav-link">Introduction</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#terminology" class="nav-link">Terminology</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#what-is-this-theorem" class="nav-link">What is this theorem?</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-1" class="nav-link">Example 1</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#question-1-what-are-the-lengths-of-the-legs-of-the-triangle-on-the-left" class="nav-link">Question 1: What are the lengths of the legs of the triangle on the left?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#question-2-what-is-the-area-of-the-yellow-square-in-the-diagram-to-the-left" class="nav-link">Question 2: What is the area of the yellow square in the diagram to the left?</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#question-3-what-is-the-length-of-the-hypotenuse-of-the-triangle-to-the-left" class="nav-link">Question 3: What is the length of the hypotenuse of the triangle to the left?</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#proof" class="nav-link">Proof</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#algebraic-proof" class="nav-link">Algebraic proof</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#area-of-the-large-square" class="nav-link">Area of the large square</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#area-of-the-pieces" class="nav-link">Area of the pieces</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h4">
+            <a href="#areas-are-equal" class="nav-link">Areas are equal</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#example-2" class="nav-link">Example 2</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#practice" class="nav-link">Practice</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#question-1" class="nav-link">Question 1</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#question-2" class="nav-link">Question 2</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#extend-your-knowledge" class="nav-link">Extend Your Knowledge</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#example" class="nav-link">Example</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#id1" class="nav-link">Practice</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#checking-right-angles" class="nav-link">Checking Right angles</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#id2" class="nav-link">Example</a><ul class="nav section-nav flex-column">
+                
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#id3" class="nav-link">Practice</a>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h3">
+            <a href="#word-question" class="nav-link">Word question</a>
+        </li>
+    
+            </ul>
+        </li>
+    
+        <li class="nav-item toc-entry toc-h2">
+            <a href="#what-did-we-learn" class="nav-link">What did we learn?</a>
+        </li>
+    
+    </ul>
+</nav>
+
+
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><img alt="Callysto.ca Banner" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-top.jpg?raw=true" /></p>
+<p><a href="https://hub.callysto.ca/jupyter/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fcallysto%2Fcurriculum-notebooks&branch=master&subPath=Mathematics/PythagoreanTheorem/pythagorean-theorem.ipynb&depth=1" target="_parent"><img src="https://raw.githubusercontent.com/callysto/curriculum-notebooks/master/open-in-callysto-button.svg?sanitize=true" width="123" height="24" alt="Open in Callysto"/></a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>%%html
+
+&lt;script&gt;
+  function code_toggle() {
+    if (code_shown){
+      $(&#39;div.input&#39;).hide(&#39;500&#39;);
+      $(&#39;#toggleButton&#39;).val(&#39;Show Code&#39;)
+    } else {
+      $(&#39;div.input&#39;).show(&#39;500&#39;);
+      $(&#39;#toggleButton&#39;).val(&#39;Hide Code&#39;)
+    }
+    code_shown = !code_shown
+  }
+
+  $( document ).ready(function(){
+    code_shown=false;
+    $(&#39;div.input&#39;).hide()
+  });
+&lt;/script&gt;
+&lt;form action=&quot;javascript:code_toggle()&quot;&gt;&lt;input type=&quot;submit&quot; id=&quot;toggleButton&quot; value=&quot;Show Code&quot;&gt;&lt;/form&gt;
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<script>
+  function code_toggle() {
+    if (code_shown){
+      $('div.input').hide('500');
+      $('#toggleButton').val('Show Code')
+    } else {
+      $('div.input').show('500');
+      $('#toggleButton').val('Hide Code')
+    }
+    code_shown = !code_shown
+  }
+
+  $( document ).ready(function(){
+    code_shown=false;
+    $('div.input').hide()
+  });
+</script>
+<form action="javascript:code_toggle()"><input type="submit" id="toggleButton" value="Show Code"></form>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">IFrame</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="k">as</span> <span class="nn">widgets</span>
+<span class="kn">import</span> <span class="nn">IPython</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pythagorean-theorem">
+<h1>Pythagorean Theorem<a class="headerlink" href="#pythagorean-theorem" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="grade-8-curriculum">
+<h2>Grade 8 curriculum<a class="headerlink" href="#grade-8-curriculum" title="Permalink to this headline">¶</a></h2>
+<p>This jupyter notebook will cover the pythagorean theorem, including its applications and a proof of the theorem.</p>
+<p><strong>Note:</strong> You should have a solid understanding of square roots and squaring numbers before moving on to this notebook. This notebook assumes you know these concepts well, though it also gives more practice of these concepts.</p>
+</div>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>Say you have 2 sides of a right angle triangle and are trying to figure out the third. How can we do this? Thankfully that’s where the pythagorean theorem comes in!</p>
+<img style="float: right;" src="images/pythagoreanTriangle.png" width="50%" height="700">
+<div class="section" id="terminology">
+<h3>Terminology<a class="headerlink" href="#terminology" title="Permalink to this headline">¶</a></h3>
+<p><strong>Hypotenuse:</strong> the longest side of a triangle</p>
+<p><strong>legs:</strong> the other two sides of a triangle that are not the hypotenuse</p>
+</div>
+<div class="section" id="what-is-this-theorem">
+<h3>What is this theorem?<a class="headerlink" href="#what-is-this-theorem" title="Permalink to this headline">¶</a></h3>
+<p>When you draw a right angle triangle with a square on each side like this diagram, there’s a relationship between the areas of the squares. You should notice that the areas of the squares on the two legs added together are equal to the area of the largest square on the hypotenuse. In this example, the area of the red square is <span class="math notranslate nohighlight">\(9 \text{ cm}^2\)</span>, the area of the blue square is <span class="math notranslate nohighlight">\(16 \text{ cm}^2\)</span>, and the area of the yellow triangle is <span class="math notranslate nohighlight">\(25 \text{ cm}^2\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\text{Notice that } \color{red}{9 \text{ cm}^2} + \color{blue}{16 \text{ cm}^2} = \color{yellow}{25 \text{ cm}^2}\]</div>
+<div class="math notranslate nohighlight">
+\[\text{But } \color{red}{3 \text{ cm}} + \color{blue}{4 \text{ cm}} ≠ \color{yellow}{5 \text{ cm}}\]</div>
+<p>This relationship actually works for all right angle triangles!</p>
+<p><strong>The pythagoream theorem is <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span> where <span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(b\)</span> are the legs and <span class="math notranslate nohighlight">\(c\)</span> is the hypotenuse. It does not matter which leg is <span class="math notranslate nohighlight">\(a\)</span> or <span class="math notranslate nohighlight">\(b\)</span></strong>.</p>
+<p><strong>Fact:</strong> The Pythagorean Theorem is named for the Greek mathematician, Pythagoras.</p>
+<p><em>Pythagorean Triples are sets of three numbers that create a right angle triangle like this one so 3,4,5 is a pythagorean triple</em></p>
+</div>
+</div>
+<div class="section" id="example-1">
+<h2>Example 1<a class="headerlink" href="#example-1" title="Permalink to this headline">¶</a></h2>
+<img style="float: left;" src="images/PythagoreanTriangle2.png" width="45%" height="auto">
+<div class="section" id="question-1-what-are-the-lengths-of-the-legs-of-the-triangle-on-the-left">
+<h3>Question 1: What are the lengths of the legs of the triangle on the left?<a class="headerlink" href="#question-1-what-are-the-lengths-of-the-legs-of-the-triangle-on-the-left" title="Permalink to this headline">¶</a></h3>
+<p>The side length of a square is the square root of its area. <br>
+The side length of the red square is <span class="math notranslate nohighlight">\(\sqrt{4 \text{ m}^2} = 2 \text{ m}\)</span>. <br>
+The side length of the blue square is <span class="math notranslate nohighlight">\(\sqrt{9 \text{ m}^2} = 3 \text{ m}\)</span>. <br>
+Therefore the lengths of the legs are <span class="math notranslate nohighlight">\(2 \text{ m}\)</span> and <span class="math notranslate nohighlight">\(3 \text{ m}\)</span>.</p>
+</div>
+<div class="section" id="question-2-what-is-the-area-of-the-yellow-square-in-the-diagram-to-the-left">
+<h3>Question 2: What is the area of the yellow square in the diagram to the left?<a class="headerlink" href="#question-2-what-is-the-area-of-the-yellow-square-in-the-diagram-to-the-left" title="Permalink to this headline">¶</a></h3>
+<p>Let’s use the pythagorean theorem. The area of the two smaller squares added together is equal to the area of the larger square. <br>
+The area of the red square is $ 4 \text{ m}^2$ and the area of the blue square is $ 9 \text{ m}^2$. <br>
+Now we add them together: $ 4 \text{ m}^2 + 9 \text{ m}^2 = 13 \text{ m}^2$. <br>
+The area of the yellow square is $ 13 \text{ m}^2$.</p>
+</div>
+<div class="section" id="question-3-what-is-the-length-of-the-hypotenuse-of-the-triangle-to-the-left">
+<h3>Question 3: What is the length of the hypotenuse of the triangle to the left?<a class="headerlink" href="#question-3-what-is-the-length-of-the-hypotenuse-of-the-triangle-to-the-left" title="Permalink to this headline">¶</a></h3>
+<p>Now we know the area of the large yellow square is $ 13 \text{ m}^2$, so the side length of the square is <span class="math notranslate nohighlight">\(\sqrt{13} \text{ m}\)</span>. <br>
+The hypotenuse of the triangle has the same length as the length of the side of the yellow square. <br>
+Therefore the length of the hypothenuse is <span class="math notranslate nohighlight">\(\sqrt{13} \text{ m}\)</span>.</p>
+</div>
+</div>
+<div class="section" id="proof">
+<h2>Proof<a class="headerlink" href="#proof" title="Permalink to this headline">¶</a></h2>
+<p>Not convinced that this relationship works for all right angle triangles? Look at the visual proof from mathisfun.com.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">YouTubeVideo</span>
+<span class="n">YouTubeVideo</span><span class="p">(</span><span class="s1">&#39;_87RbSoELW8?rel=0&#39;</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="s2">&quot;560&quot;</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="s2">&quot;315&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+<iframe
+    width="560"
+    height="315"
+    src="https://www.youtube.com/embed/_87RbSoELW8?rel=0"
+    frameborder="0"
+    allowfullscreen
+></iframe>
+</div></div>
+</div>
+<div class="section" id="algebraic-proof">
+<h3>Algebraic proof<a class="headerlink" href="#algebraic-proof" title="Permalink to this headline">¶</a></h3>
+<p>We will work through the proof of a² + b² = c² together. Lets look at the diagram below.</p>
+<img style="float: center;" src="images/PythagoreanProof.png" width="30%" height="auto">
+<p>You can see the 4 identical right angle triangles within a square, and the sides of each triangle are labelled just like our first example. a = 3, b = 4, and c = 5.</p>
+<div class="section" id="area-of-the-large-square">
+<h4>Area of the large square<a class="headerlink" href="#area-of-the-large-square" title="Permalink to this headline">¶</a></h4>
+<p>The area of the large square is its side length squared, which is <span class="math notranslate nohighlight">\((3 + 4)^2 = 7^2 = 49.\)</span></p>
+</div>
+<div class="section" id="area-of-the-pieces">
+<h4>Area of the pieces<a class="headerlink" href="#area-of-the-pieces" title="Permalink to this headline">¶</a></h4>
+<p>The area of the smaller yellow square in the middle is $ 5^2 = 25.$ <br>
+The area of one blue triangle is <span class="math notranslate nohighlight">\(\frac{3 \times 4}{2}\)</span> and since there’s 4 of them, the area of all 4 triangles is
+<span class="math notranslate nohighlight">\($\frac{4 \times (3 \times 4)}{2} = \frac{4 \times 12}{2} = \frac{48}{2} = 24.\)</span>$ <br>
+Now we add those together to get $ 25 + 24 = 49.$</p>
+</div>
+<div class="section" id="areas-are-equal">
+<h4>Areas are equal<a class="headerlink" href="#areas-are-equal" title="Permalink to this headline">¶</a></h4>
+<p>You can see that $ 49 = 49. $ This is because the area of the large square takes up the exact same space as the ares of all 4 blue triangles and the yellow square.</p>
+<p>This doesn’t just work for these numbers though, it works for any numbers that create right angle triangles! If you want to see the full proof without numbers, you can check it out at <a class="reference external" href="https://www.mathsisfun.com/geometry/pythagorean-theorem-proof.html">mathisfun.com</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="example-2">
+<h2>Example 2<a class="headerlink" href="#example-2" title="Permalink to this headline">¶</a></h2>
+<p>Let’s go through an example of a question without the squares. What is the length of the hypotenuse of the triangle below?</p>
+<img style="float: center;" src="images/PythagoreanTriangle4.png" width="40%" height="auto">
+<p>Recall the pythagorean theorem: <span class="math notranslate nohighlight">\(a^2 + b^2 = c^2\)</span>. <br>
+Now let’s put the values we know into the theorem. The length of the hypotenuse is the value of c.
+<span class="math notranslate nohighlight">\($\begin{align*}
+(2 \text{ cm})^2 + (5 \text{ cm})^2 &amp; = c^2 \\
+4 \text{ cm}^2 + 25 \text{ cm}^2 &amp; = c^2 \\
+29 \text{ cm}^2 &amp; = c^2 \\
+\sqrt{29 \text { cm}^2} &amp; = \sqrt{c^2} \\
+\sqrt{29} \text{ cm} &amp; = c \\
+\end{align*}\)</span>$</p>
+<p>Let’s approximate the answer to one decimal place using a calulator. <span class="math notranslate nohighlight">\(\sqrt{29} \text{ cm} = 5.4 \text{ cm}\)</span>. <br>
+The length of the hypotenuse is <span class="math notranslate nohighlight">\(\sqrt{29} \text{ cm}\)</span> or approximately <span class="math notranslate nohighlight">\(5.4 \text{ cm}\)</span>.</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="practice">
+<h2>Practice<a class="headerlink" href="#practice" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="question-1">
+<h3>Question 1<a class="headerlink" href="#question-1" title="Permalink to this headline">¶</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/PythagoreanTriangle5.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_11_0.png" src="../../../_images/pythagorean-theorem_11_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;9 m&#39;</span><span class="p">,</span> <span class="s1">&#39;6 m&#39;</span><span class="p">,</span><span class="s1">&#39;6.4 m&#39;</span><span class="p">,</span><span class="s1">&#39;5.4 m&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="s1">&#39;Hypotenuse&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">display1</span><span class="p">():</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What is the length of the hypotenuse of the triangle above?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Round to one decimal place when necessary.&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer1</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check1</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">display1</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">answer1</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;6.4 m&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct! Great job! The theorem properly filled out looks like this: 16 m² + 25 m² = 41 m²&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, that&#39;s not right, try again. Pythagorean Theorem is a² + b² = c².&quot;</span><span class="p">)</span>
+
+<span class="n">display1</span><span class="p">()</span>
+<span class="n">answer1</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check1</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>What is the length of the hypotenuse of the triangle above?
+Round to one decimal place when necessary.
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "ddc0a2186cb940c9b03a78a1f4d09cad"}
+</script></div>
+</div>
+</div>
+<div class="section" id="question-2">
+<h3>Question 2<a class="headerlink" href="#question-2" title="Permalink to this headline">¶</a></h3>
+<p>Let’s have a more practical problem for the pythagorean theorem. Say you have a table that’s shortest side is 3.10 m long. If the table is held on an angle, can it fit through this door frame below? Round to 2 decimal places.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/PythagoreanTriangleDoor.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_14_0.png" src="../../../_images/pythagorean-theorem_14_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer3</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;2.00 m&#39;</span><span class="p">,</span> <span class="s1">&#39;2.83 m&#39;</span><span class="p">,</span><span class="s1">&#39;3.16 m&#39;</span><span class="p">,</span><span class="s1">&#39;4.03 m&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="s1">&#39;Diagonal&#39;</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">display3</span><span class="p">():</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What is the diagonal of the door?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Round to two decimal places when necessary.&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check3</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">display3</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">answer3</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;3.16 m&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct! Great job!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, that&#39;s not right, try again. Pythagorean Theorem is a² + b² = c².&quot;</span><span class="p">)</span>
+
+<span class="n">display3</span><span class="p">()</span>
+<span class="n">answer3</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check3</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>What is the diagonal of the door?
+Round to two decimal places when necessary.
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "a263c411aaa54312b13f66ce6c00f8d9"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yes, the table will fit.&#39;</span><span class="p">,</span> <span class="s1">&#39;No, the table will not fit&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">display2</span><span class="p">():</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is the length of the table smaller than the diagonal of the door?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Round to two decimal places when necessary.&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer2</span><span class="p">)</span> 
+    
+<span class="k">def</span> <span class="nf">check2</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">display2</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">answer2</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;Yes, the table will fit.&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s right! The table will fit through the door on an angle.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, that&#39;s not right, the table will be able to fit in the door because 3.1 m is less than 3.16 m.&quot;</span><span class="p">)</span>
+            
+<span class="n">display2</span><span class="p">()</span>
+<span class="n">answer2</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check2</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Is the length of the table smaller than the diagonal of the door?
+Round to two decimal places when necessary.
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "3dc9fb5deb3047c5a7d3bf365d83e196"}
+</script></div>
+</div>
+<p>What else would knowing how to find the hypotenuse be helpful for?</p>
+</div>
+</div>
+<div class="section" id="extend-your-knowledge">
+<h2>Extend Your Knowledge<a class="headerlink" href="#extend-your-knowledge" title="Permalink to this headline">¶</a></h2>
+<p>We can use the pythagorean theorem for more than just finding the length of the hypotenuse given the two legs. We can find the length of one leg given the other leg and the hypotenuse.</p>
+<div class="section" id="example">
+<h3>Example<a class="headerlink" href="#example" title="Permalink to this headline">¶</a></h3>
+<p>Given this right angled triangle below, what is the missing side length?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/PythagoreanTriangle6.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_19_0.png" src="../../../_images/pythagorean-theorem_19_0.png" />
+</div>
+</div>
+<p>Let’s start by filling in the information we know into the pythagorean theorem.
+<span class="math notranslate nohighlight">\($\begin{align*}
+a^2 + b^2 &amp; = c^2 \\
+a^2 + (\sqrt{20 \text{ units}})^2 &amp; = (6 \text{ units})^2 \\
+\end{align*}\)</span>$</p>
+<p>Now let’s solve this equation for the missing variable. In this example, we will solve for <span class="math notranslate nohighlight">\(a\)</span>.
+<span class="math notranslate nohighlight">\($\begin{align*}
+a^2 + (\sqrt{20 \text{ units}})^2 &amp; = (6 \text{ units})^2 \\
+a^2 + 20 \text{ units}^2 &amp; = 36 \text{ units}^2 \tag{apply the power of 2 to the bases} \\
+a^2 + 20 \text{ units}^2 - 20 \text{ units}^2 &amp; = 36 \text{ units}^2 - 20 \text{ units}^2 \tag{subtract 20 units² from both sides} \\
+\sqrt{a^2} &amp; = \sqrt{16 \text{ units}^2} \tag{square root both sides} \\
+a &amp; = 4 \text{ units}
+\end{align*}\)</span>$</p>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Practice<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<p>Now you try to calculate the length of the missing leg.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/PythagoreanTriangle8.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_22_0.png" src="../../../_images/pythagorean-theorem_22_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer4</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;8 m&#39;</span><span class="p">,</span> <span class="s1">&#39;9 m&#39;</span><span class="p">,</span><span class="s1">&#39;8.3 m&#39;</span><span class="p">,</span><span class="s1">&#39;7.8 m&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span> <span class="s1">&#39;Side Length&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">display4</span><span class="p">():</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What is the length of the leg labelled a above?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Round to one decimal place when necessary.&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer4</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check4</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">display4</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">answer4</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;8 m&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Correct! If we divide each side length by 2, you might notice that this triangle is the same one </span><span class="se">\n</span><span class="s2"> as the very first triangle we looked at in this notebook!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, that&#39;s not right, try again. Pythagorean Theorem is a² + b² = c². We are looking for a.&quot;</span><span class="p">)</span>
+
+<span class="n">display4</span><span class="p">()</span>
+<span class="n">answer4</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check4</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>What is the length of the leg labelled a above?
+Round to one decimal place when necessary.
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "67f51b45d12b4901a915ee01a6c4df4a"}
+</script></div>
+</div>
+</div>
+<div class="section" id="checking-right-angles">
+<h2>Checking Right angles<a class="headerlink" href="#checking-right-angles" title="Permalink to this headline">¶</a></h2>
+<p>We can check if a triangle is a right angle triangle by knowing if its sides fit the pythagorean theorem. If they don’t then it isn’t a right angle triangle. Lets look at an acute and an obtuse triangle and compare their sides in the pythagorean theorem. You know, just to make sure.</p>
+<p>Look at the three triangles below. One is a right angle triangle, one is an acute tringle, and one is an obtuse triangle. Fill in the table below by clicking on the box you want to fill (where it’s written ‘nan’) and typing in your answer. The longest side is side c.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/ThreeTriangles.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">600</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_26_0.png" src="../../../_images/pythagorean-theorem_26_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">qgrid</span>
+<span class="n">table</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;Right&#39;</span><span class="p">,</span> <span class="s1">&#39;Acute&#39;</span><span class="p">,</span> <span class="s1">&#39;Obtuse&#39;</span><span class="p">]),</span> <span class="n">columns</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="s1">&#39;a²&#39;</span><span class="p">,</span> <span class="s1">&#39;b²&#39;</span><span class="p">,</span><span class="s1">&#39;a² + b²&#39;</span><span class="p">,</span> <span class="s1">&#39;c²&#39;</span><span class="p">]))</span>
+<span class="n">table_widget</span> <span class="o">=</span> <span class="n">qgrid</span><span class="o">.</span><span class="n">QgridWidget</span><span class="p">(</span><span class="n">df</span> <span class="o">=</span><span class="n">table</span><span class="p">,</span> <span class="n">show_toolbar</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">table_widget</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "09175a8bf1044c218d369c7034a82ef4"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer5</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span><span class="s1">&#39;No&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check5</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does a² + b² = c² for all triangles?&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer5</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer5</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;No&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s right! The pythagorean theorem only works for right angle triangles.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Actually, the pythagorean theorem only works for right angle triangles.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Now let&#39;s use this knowledge to check if triangles have a right angle or not!&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does a² + b² = c² for all triangles?&quot;</span><span class="p">)</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer5</span><span class="p">)</span>
+<span class="n">answer5</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check5</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Does a² + b² = c² for all triangles?
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "522f6985d7bc4754bc8ff6a17d576b49"}
+</script></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>Example<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p>Let’s go through an example together. Here is a triangle with all three sides labelled. Is this a right angle triangle?</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/angle2.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">300</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_30_0.png" src="../../../_images/pythagorean-theorem_30_0.png" />
+</div>
+</div>
+<p>Remember, the longest side is side c. Let’s fill in the pythagorean theorem and see if the left side equals the right. <br>
+Since c is the largest side, a and b will be the legs.
+<span class="math notranslate nohighlight">\($\begin{align*}
+\text{Let's start with the left side:} \\
+a &amp; = 7 \text{ m} \\
+a^2 &amp; = 49 \text{ m}^2 \\
+b &amp; = 10 \text{ m} \\
+b^2&amp; = 100 \text{ m}^2 \\
+\text{Now let's add them together:} \\
+a^2 + b^2 &amp; = 49 \text{ m}^2 + 100 \text{ m}^2 \\
+a^2 + b^2 &amp; = 149 \text{ m}^2 \\
+\end{align*}\)</span>$
+<strong>The left side equals 149 m²</strong> <br>
+<span class="math notranslate nohighlight">\($\begin{align*}
+\text{And now the right side:} \\
+c &amp; = 13 \text{ m} \\
+c^2 &amp; = 169 \text{ m}^2 \\
+\end{align*}\)</span>$
+<strong>The right side equals 169 m²</strong> <br></p>
+<p>149 m² does not equal 169 m² therefore this triangle is not a right angle triangle.</p>
+<div class="section" id="id3">
+<h3>Practice<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<p>Now it’s your turn to check if this triangle below is a right angle triangle.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Image</span><span class="p">(</span><span class="s1">&#39;images/angle1.png&#39;</span><span class="p">,</span><span class="n">width</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span><span class="n">height</span><span class="o">=</span><span class="mi">300</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../../_images/pythagorean-theorem_33_0.png" src="../../../_images/pythagorean-theorem_33_0.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">submit1</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="n">button_style</span><span class="o">=</span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<span class="n">answer6</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="s1">&#39;Your answer here&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Left side&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">display6</span><span class="p">():</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What is a² + b²?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type your answer below, and don&#39;t forget units! Eg: write 50 cm^2 or 50 units^2&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer6</span><span class="p">,</span> <span class="n">submit1</span><span class="p">)</span>
+    <span class="n">submit1</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">check6</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">check6</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">display6</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">answer6</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;169 units^2&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s right! Now let&#39;s move on to the right side.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">answer6</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;169&#39;</span> <span class="ow">or</span> <span class="n">answer6</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;169 units&#39;</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Don&#39;t forget your units!&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, that&#39;s not right, try again before moving on to the right side.&quot;</span><span class="p">)</span>
+            
+<span class="n">display6</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>What is a² + b²?
+Type your answer below, and don&#39;t forget units! Eg: write 50 cm^2 or 50 units^2
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "f13966c66c6a41ea84bde42b87a345ba"}
+</script><script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "8d3341311066411cb0b2209f2f0bd5bb"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">submit2</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s1">&#39;Submit&#39;</span><span class="p">,</span> <span class="n">button_style</span><span class="o">=</span><span class="s1">&#39;success&#39;</span><span class="p">)</span>
+<span class="n">answer7</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Text</span><span class="p">(</span><span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">placeholder</span><span class="o">=</span><span class="s1">&#39;Your answer here&#39;</span><span class="p">,</span> <span class="n">description</span><span class="o">=</span><span class="s1">&#39;Right side&#39;</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">display7</span><span class="p">():</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;What is c²?&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Type your answer below, and don&#39;t forget units! Eg: write 50 cm^2 or 50 units^2&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer7</span><span class="p">,</span> <span class="n">submit2</span><span class="p">)</span>
+    <span class="n">submit2</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">check7</span><span class="p">)</span>
+    
+<span class="k">def</span> <span class="nf">check7</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">display7</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">answer7</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;169 units^2&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s correct! Great job!&quot;</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">answer7</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;169&#39;</span> <span class="ow">or</span> <span class="n">answer7</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;169 units&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Don&#39;t forget your units!&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Sorry, try again.&quot;</span><span class="p">)</span>
+            
+<span class="n">display7</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>What is c²?
+Type your answer below, and don&#39;t forget units! Eg: write 50 cm^2 or 50 units^2
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "293571fadade4803bec2c533ab9bbffe"}
+</script><script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "597a12108ce443509cef7edd1d60b78e"}
+</script></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer8</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span><span class="s1">&#39;No&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check8</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is this triangle a right angle triangle?&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer8</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer8</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;Yes&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s right! This is a right angle triangle&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Actually, this triangle is a right angle triangle.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Is this triangle a right angle triangle?&quot;</span><span class="p">)</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer8</span><span class="p">)</span>
+<span class="n">answer8</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check8</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Is this triangle a right angle triangle?
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "4034542a5e624dedadfc54d341e4452c"}
+</script></div>
+</div>
+</div>
+<div class="section" id="word-question">
+<h3>Word question<a class="headerlink" href="#word-question" title="Permalink to this headline">¶</a></h3>
+<p><img alt="frame" src="https://images.freeimages.com/images/premium/large-thumbs/5963/59633908-comic-cartoon-picture-frame.jpg" /></p>
+<p>Bailey has four pieces of wood. Two of them are 3 inches long. The other two are 5 inches long. <br>
+Bailey makes a rectangular picture frame using these pieces. Then the diagonal is measured to be 7 inches long. <br></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">answer9</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">RadioButtons</span><span class="p">(</span><span class="n">options</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Yes&#39;</span><span class="p">,</span><span class="s1">&#39;No&#39;</span><span class="p">],</span>
+                              <span class="n">value</span><span class="o">=</span><span class="kc">None</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">check9</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does the picture frame have a right angle corner?&quot;</span><span class="p">)</span>
+    <span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer9</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">answer9</span><span class="o">.</span><span class="n">value</span> <span class="o">==</span> <span class="s1">&#39;No&#39;</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;That&#39;s right! The frame does not have a right angle corner.&quot;</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Actually, the frame does not have a right angle corner.&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Does the picture frame have a right angle corner?&quot;</span><span class="p">)</span>
+<span class="n">IPython</span><span class="o">.</span><span class="n">display</span><span class="o">.</span><span class="n">display</span><span class="p">(</span><span class="n">answer9</span><span class="p">)</span>
+<span class="n">answer9</span><span class="o">.</span><span class="n">observe</span><span class="p">(</span><span class="n">check9</span><span class="p">,</span> <span class="s1">&#39;value&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-none notranslate"><div class="highlight"><pre><span></span>Does the picture frame have a right angle corner?
+</pre></div>
+</div>
+<script type="application/vnd.jupyter.widget-view+json">
+{"version_major": 2, "version_minor": 0, "model_id": "88a2d91eb43245d580a459c72e8c9b84"}
+</script></div>
+</div>
+</div>
+</div>
+<div class="section" id="what-did-we-learn">
+<h2>What did we learn?<a class="headerlink" href="#what-did-we-learn" title="Permalink to this headline">¶</a></h2>
+<p>Lets summarize what we have learned in this notebook:</p>
+<ul class="simple">
+<li><p>The pythagorean theorem states: a² + b² = c²</p></li>
+<li><p>This theorem has been proven multiple ways</p></li>
+<li><p>This theorem can be used for multiple purposes</p>
+<ul>
+<li><p>Find the length of the hypotenuse</p></li>
+<li><p>Find the length of a side</p></li>
+<li><p>Confirm if there’s a right angle</p></li>
+</ul>
+</li>
+<li><p>Lots of situations in life need the pythagorean theorem</p></li>
+</ul>
+<p>This math concept will be used for many more years in school. Make sure to do lots of practice, even beyond this notebook so that you understand the pythagorean theorem well.</p>
+<p><a class="reference external" href="https://github.com/callysto/curriculum-notebooks/blob/master/LICENSE.md"><img alt="Callysto.ca License" src="https://github.com/callysto/curriculum-notebooks/blob/master/callysto-notebook-banner-bottom.jpg?raw=true" /></a></p>
+</div>
+</div>
+
+
+<script type="application/vnd.jupyter.widget-state+json">
+{"state": {"4e1a7316cf35478bb61f717112a78a87": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "640d73087a13477aa1bbf201120c3a6a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "ddc0a2186cb940c9b03a78a1f4d09cad": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["9 m", "6 m", "6.4 m", "5.4 m"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "Hypotenuse", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_4e1a7316cf35478bb61f717112a78a87", "style": "IPY_MODEL_640d73087a13477aa1bbf201120c3a6a"}}, "5509711bd45248639ee6aa89f7b22c28": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "c3aa4e277ac24e8283e0f9207fd41d6a": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "a263c411aaa54312b13f66ce6c00f8d9": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["2.00 m", "2.83 m", "3.16 m", "4.03 m"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "Diagonal", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_5509711bd45248639ee6aa89f7b22c28", "style": "IPY_MODEL_c3aa4e277ac24e8283e0f9207fd41d6a"}}, "c1430a3d9db84f3fb44ca87aab4f0448": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "bc2fb0029790463d8bc13c6c1c99febb": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "3dc9fb5deb3047c5a7d3bf365d83e196": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["Yes, the table will fit.", "No, the table will not fit"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_c1430a3d9db84f3fb44ca87aab4f0448", "style": "IPY_MODEL_bc2fb0029790463d8bc13c6c1c99febb"}}, "02c66e7e09164c118c94dea4ab454e33": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a184e307957747028a5f956dfb403f36": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "67f51b45d12b4901a915ee01a6c4df4a": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["8 m", "9 m", "8.3 m", "7.8 m"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "Side Length", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_02c66e7e09164c118c94dea4ab454e33", "style": "IPY_MODEL_a184e307957747028a5f956dfb403f36"}}, "a2bf8aec7796485296b573af91e9e808": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "09175a8bf1044c218d369c7034a82ef4": {"model_name": "QgridModel", "model_module": "qgrid", "model_module_version": "1.1.1", "state": {"_columns": {"index": {"name": "index", "type": "string", "is_index": true, "index_display_text": "", "level": 0, "first_index": true, "position": 0, "field": "index", "id": "index", "cssClass": "string"}, "qgrid_unfiltered_index": {"name": "qgrid_unfiltered_index", "type": "integer", "position": 1, "field": "qgrid_unfiltered_index", "id": "qgrid_unfiltered_index", "cssClass": "integer"}, "a\u00b2": {"name": "a\u00b2", "type": "string", "position": 2, "field": "a\u00b2", "id": "a\u00b2", "cssClass": "string"}, "b\u00b2": {"name": "b\u00b2", "type": "string", "position": 3, "field": "b\u00b2", "id": "b\u00b2", "cssClass": "string"}, "a\u00b2 + b\u00b2": {"name": "a\u00b2 + b\u00b2", "type": "string", "position": 4, "field": "a\u00b2 + b\u00b2", "id": "a\u00b2 + b\u00b2", "cssClass": "string"}, "c\u00b2": {"name": "c\u00b2", "type": "string", "position": 5, "field": "c\u00b2", "id": "c\u00b2", "cssClass": "string"}}, "_df_json": "{\"schema\": {\"fields\":[{\"name\":\"index\",\"type\":\"string\"},{\"name\":\"qgrid_unfiltered_index\",\"type\":\"integer\"},{\"name\":\"a\\u00b2\",\"type\":\"string\"},{\"name\":\"b\\u00b2\",\"type\":\"string\"},{\"name\":\"a\\u00b2 + b\\u00b2\",\"type\":\"string\"},{\"name\":\"c\\u00b2\",\"type\":\"string\"}],\"primaryKey\":[\"index\"],\"pandas_version\":\"0.20.0\"}, \"data\": [{\"index\":\"Right\",\"qgrid_unfiltered_index\":0,\"a\\u00b2\":\"nan\",\"b\\u00b2\":\"nan\",\"a\\u00b2 + b\\u00b2\":\"nan\",\"c\\u00b2\":\"nan\"},{\"index\":\"Acute\",\"qgrid_unfiltered_index\":1,\"a\\u00b2\":\"nan\",\"b\\u00b2\":\"nan\",\"a\\u00b2 + b\\u00b2\":\"nan\",\"c\\u00b2\":\"nan\"},{\"index\":\"Obtuse\",\"qgrid_unfiltered_index\":2,\"a\\u00b2\":\"nan\",\"b\\u00b2\":\"nan\",\"a\\u00b2 + b\\u00b2\":\"nan\",\"c\\u00b2\":\"nan\"}]}", "_df_range": [0, 100], "_dom_classes": [], "_editable_rows": {}, "_index_col_name": "qgrid_unfiltered_index", "_interval_columns": [], "_model_module": "qgrid", "_model_module_version": "1.1.1", "_model_name": "QgridModel", "_multi_index": false, "_row_count": 3, "_row_styles": {}, "_sort_ascending": true, "_sort_field": null, "_view_count": null, "_view_module": "qgrid", "_view_module_version": "1.1.1", "_view_name": "QgridView", "_viewport_range": [0, 100], "grid_options": {"fullWidthRows": true, "syncColumnCellResize": true, "forceFitColumns": true, "defaultColumnWidth": 150, "rowHeight": 28, "enableColumnReorder": false, "enableTextSelectionOnCells": true, "editable": true, "autoEdit": false, "explicitInitialization": true, "maxVisibleRows": 15, "minVisibleRows": 8, "sortable": true, "filterable": true, "highlightSelectedCell": false, "highlightSelectedRow": true, "boldIndex": true}, "id": "6e9cd5bf-6676-4b0c-9324-0cda2c76f4b6", "layout": "IPY_MODEL_a2bf8aec7796485296b573af91e9e808", "precision": 5, "show_toolbar": false}}, "c6938c532d454c29952b4f9076eb4249": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4c680addff4646d88879f439656fd630": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "522f6985d7bc4754bc8ff6a17d576b49": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["Yes", "No"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_c6938c532d454c29952b4f9076eb4249", "style": "IPY_MODEL_4c680addff4646d88879f439656fd630"}}, "8755d89059d54fd89fef14cc8c85f33d": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "a13ed70ea8f648b1a3db02b1283ab45c": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "button_color": null, "font_weight": ""}}, "8d3341311066411cb0b2209f2f0bd5bb": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ButtonView", "button_style": "success", "description": "Submit", "disabled": false, "icon": "", "layout": "IPY_MODEL_8755d89059d54fd89fef14cc8c85f33d", "style": "IPY_MODEL_a13ed70ea8f648b1a3db02b1283ab45c", "tooltip": ""}}, "8087f25157ef403cb98f037251677868": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "3766f261df4c449d8bd6c8218eba5d3e": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "f13966c66c6a41ea84bde42b87a345ba": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "Left side", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_8087f25157ef403cb98f037251677868", "placeholder": "Your answer here", "style": "IPY_MODEL_3766f261df4c449d8bd6c8218eba5d3e", "value": ""}}, "1f7d25d2afec4c0693d440d4522cd4ef": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "1b681ae67dae45b48f5ef1c1094f00cb": {"model_name": "ButtonStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ButtonStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "button_color": null, "font_weight": ""}}, "597a12108ce443509cef7edd1d60b78e": {"model_name": "ButtonModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "ButtonModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "ButtonView", "button_style": "success", "description": "Submit", "disabled": false, "icon": "", "layout": "IPY_MODEL_1f7d25d2afec4c0693d440d4522cd4ef", "style": "IPY_MODEL_1b681ae67dae45b48f5ef1c1094f00cb", "tooltip": ""}}, "3449238560e4416da245fd394c1a7f64": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "ec3d03e4fb2546a9be9499f0eb1e467c": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "293571fadade4803bec2c533ab9bbffe": {"model_name": "TextModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "TextModel", "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "TextView", "continuous_update": true, "description": "Right side", "description_tooltip": null, "disabled": false, "layout": "IPY_MODEL_3449238560e4416da245fd394c1a7f64", "placeholder": "Your answer here", "style": "IPY_MODEL_ec3d03e4fb2546a9be9499f0eb1e467c", "value": ""}}, "270c05989eb14acabce6045ffaf84d3a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "4b1d0ee9ea55425dbd020ca4a62901d5": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "4034542a5e624dedadfc54d341e4452c": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["Yes", "No"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_270c05989eb14acabce6045ffaf84d3a", "style": "IPY_MODEL_4b1d0ee9ea55425dbd020ca4a62901d5"}}, "2992b444a25f42908309b35cd12eaa0a": {"model_name": "LayoutModel", "model_module": "@jupyter-widgets/base", "model_module_version": "1.2.0", "state": {"_model_module": "@jupyter-widgets/base", "_model_module_version": "1.2.0", "_model_name": "LayoutModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "LayoutView", "align_content": null, "align_items": null, "align_self": null, "border": null, "bottom": null, "display": null, "flex": null, "flex_flow": null, "grid_area": null, "grid_auto_columns": null, "grid_auto_flow": null, "grid_auto_rows": null, "grid_column": null, "grid_gap": null, "grid_row": null, "grid_template_areas": null, "grid_template_columns": null, "grid_template_rows": null, "height": null, "justify_content": null, "justify_items": null, "left": null, "margin": null, "max_height": null, "max_width": null, "min_height": null, "min_width": null, "object_fit": null, "object_position": null, "order": null, "overflow": null, "overflow_x": null, "overflow_y": null, "padding": null, "right": null, "top": null, "visibility": null, "width": null}}, "b8c5be2b342545b089a541b4836b3aa2": {"model_name": "DescriptionStyleModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "DescriptionStyleModel", "_view_count": null, "_view_module": "@jupyter-widgets/base", "_view_module_version": "1.2.0", "_view_name": "StyleView", "description_width": ""}}, "88a2d91eb43245d580a459c72e8c9b84": {"model_name": "RadioButtonsModel", "model_module": "@jupyter-widgets/controls", "model_module_version": "1.5.0", "state": {"_dom_classes": [], "_model_module": "@jupyter-widgets/controls", "_model_module_version": "1.5.0", "_model_name": "RadioButtonsModel", "_options_labels": ["Yes", "No"], "_view_count": null, "_view_module": "@jupyter-widgets/controls", "_view_module_version": "1.5.0", "_view_name": "RadioButtonsView", "description": "", "description_tooltip": null, "disabled": false, "index": null, "layout": "IPY_MODEL_2992b444a25f42908309b35cd12eaa0a", "style": "IPY_MODEL_b8c5be2b342545b089a541b4836b3aa2"}}}, "version_major": 2, "version_minor": 0}
+</script>
+
+
+
+              </div>
+              
+        </div>
+    </div>
+    
+    
+    <div class='prev-next-bottom'>
+        
+
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Callysto.ca (A joint project of Cybera Inc and the Pacific Institute for the Mathematical Sciences)<br/>
+        
+            &copy; Copyright 2020.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+
+    <script src="../../../_static/js/index.js"></script>
+    
+  </body>
+</html>
